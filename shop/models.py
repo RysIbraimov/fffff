@@ -6,7 +6,7 @@ class Category(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
-        return f'category {self.name}'
+        return self.name
 
 class Item(models.Model):
     name = models.CharField(max_length=30)
@@ -15,7 +15,7 @@ class Item(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'item {self.name} owner {self.profile.user.name}'
+        return self.name
 
 class Order(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
