@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics, authentication,viewsets
+from rest_framework import generics, authentication
 from rest_framework import permissions
 
 from .models import Category,Item,Order
